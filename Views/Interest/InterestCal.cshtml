@@ -13,11 +13,11 @@
                 <form action="/Interest/InterestCal" method="post">
                     <div class="mb-3">
                         <label for="soTien" class="form-label">Số tiền gửi</label>
-                        <input type="text" class="form-control" id="Money" name="Money" value="@Model.Money" aria-describedby="text" placeholder="0">
+                        <input type="text" class="form-control" id="Money" name="Money" value="@Model.Money" aria-describedby="text" >
                     </div>
                     <div class="mb-3">
                         <label for="laiSuat" class="form-label">Lãi suất gửi</label>
-                        <input type="text" class="form-control" id="InterestRate" name="InterestRate" value="@Model.InterestRate" aria-describedby="text" placeholder="0">
+                        <input type="text" class="form-control" id="InterestRate" name="InterestRate" value="@Model.InterestRate" aria-describedby="text" >
                     </div>
                     <div class="mb-3">
                         <label for="kyHan" class="form-label">Kỳ hạn gửi</label>
@@ -34,7 +34,7 @@
                     <input type="text"  class="form-control" id="Interest" name="Interest" value="@Model.Interest" aria-describedby="text" readonly>
                 </div>
                 <div class="mb-3">
-                    <label for="tongSoTien" class="form-label fw-bold">Tổng số liền nhận được khi đến hạn</label>
+                    <label for="tongSoTien" class="form-label fw-bold">Tổng số tiền nhận được khi đến hạn</label>
                     <input type="text" class="form-control" id="Total" name="Total" value="@Model.Total" aria-describedby="text" readonly>
                 </div>
             </div>
