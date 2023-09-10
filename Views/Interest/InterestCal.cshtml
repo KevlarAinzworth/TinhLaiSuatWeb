@@ -1,0 +1,43 @@
+﻿@model TinhLaiSuatWeb.Models.InterestModel
+@{
+    ViewData["Title"] = "InterestCal";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>InterestCal</h1>
+<div class="d-flex flex-column">
+    <h1 class="text-center my-5 text-uppercase">công cụ tính lãi tiền gửi tiết kiệm</h1>
+    <div class="col-12">
+        <div class="d-flex flex-row justify-content-center gap-5">
+            <div class="col-4 px-5 border rounded-3 d-flex flex-column justify-content-center shadow p-3 mb-5">
+                <form action="/Interest/InterestCal" method="post">
+                    <div class="mb-3">
+                        <label for="soTien" class="form-label">Số tiền gửi</label>
+                        <input type="text" class="form-control" id="Money" name="Money" value="@Model.Money" aria-describedby="text" placeholder="0">
+                    </div>
+                    <div class="mb-3">
+                        <label for="laiSuat" class="form-label">Lãi suất gửi</label>
+                        <input type="text" class="form-control" id="InterestRate" name="InterestRate" value="@Model.InterestRate" aria-describedby="text" placeholder="0">
+                    </div>
+                    <div class="mb-3">
+                        <label for="kyHan" class="form-label">Kỳ hạn gửi</label>
+                        <input type="text" class="form-control" id="Time" name="Time" value="@Model.Time" aria-describedby="text">
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center mt-5">
+                        <button type="submit" id="ketqua" class="btn btn-primary px-4 py-2">Xem kết quả</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-4 px-5 border rounded-3 d-flex flex-column justify-content-center shadow p-3 mb-5">
+                <div class="mb-5">
+                    <label for="soTienLai" class="form-label fw-bold">Số tiền lãi nhận được</label>
+                    <input type="text"  class="form-control" id="Interest" name="Interest" value="@Model.Interest" aria-describedby="text" readonly>
+                </div>
+                <div class="mb-3">
+                    <label for="tongSoTien" class="form-label fw-bold">Tổng số liền nhận được khi đến hạn</label>
+                    <input type="text" class="form-control" id="Total" name="Total" value="@Model.Total" aria-describedby="text" readonly>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
